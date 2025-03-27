@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Главная страница сайта, на которой имеются все ссылки на остальные страницы. Выставлены товары и контакты.">
+     <meta name="keywords" content="магазин, торт, медовик, бисквит, наполеон, красный бархат, прага">
+    <title>Вкусные торты на заказ в Якутске</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Сладкие мечты</h1>
+            <p>Авторские торты на заказ</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#cakes">Наши торты</a></li>
+                <li><a href="#order">Заказать</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Мы создаем вкусные и красивые торты по индивидуальным заказам. Только натуральные ингредиенты и ручная работа!</p>
+        </div>
+    </section>
+
+    <section id="cakes" class="section">
+        <div class="container">
+            <h2>Наши торты</h2>
+            <div class="gallery">
+                <div class="cake-item">
+                    <img src="{{ url_for('static', filename='biscuit_chocolate.jpg') }}" alt="Торт бисквит шоколадный" title="Купить торт бисквит шоколадный">
+                    <h3>Шоколадный рай</h3>
+                    <p>Нежный шоколадный бисквит с вишневой прослойкой</p>
+                </div>
+                <div class="cake-item">
+                    <img src="{{ url_for('static', filename='biscuit_vanil.jpg') }}" alt="Торт бисквит ванильный" title="Купить торт бисквит ванильный">
+                    <h3>Клубничная мечта</h3>
+                    <p>Ванильный бисквит со свежей клубникой</p>
+                </div>
+                <div class="cake-item">
+                    <img src="{{ url_for('static', filename='honey_cake.jpg') }}" alt="Торт медовый" title="Купить торт медовый">
+                    <h3>Медовик</h3>
+                    <p>Классический медовый торт со сметанным кремом</p>
+                </div>
+                <div class="cake-item">
+                    <img src="{{ url_for('static', filename='napoleon.jpg') }}" alt="Торт Наполеон" title="Купить торт наполеон">
+                    <h3>Наполеон</h3>
+                    <p>Многослойный торт из слоёного теста с масляным кремом</p>
+                </div>
+                <div class="cake-item">
+                    <img src="{{ url_for('static', filename='red_velvet.jpg') }}" alt="Торт красный бархат" title="Купить торт бархат">
+                    <h3>Красный бархат</h3>
+                    <p>Шоколадный торт тёмно-красного цвета. Слоёный торт с глазурью из сливочного сыра.</p>
+                </div>
+                <div class="cake-item">
+                    <img src="{{ url_for('static', filename='praga.jpg') }}" alt="Торт Прага" title="Купить торт прага">
+                    <h3>Прага</h3>
+                    <p>Состоит из трёх бисквитных коржей с двумя слоями крема «Пражский»</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="section">
+        <div class="container">
+            <h2>Заказать торт</h2>
+            <form>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <textarea placeholder="Опишите ваш торт (размер, вкус, декор)"></textarea>
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>Email: example@mail.ru</p>
+            <p>Адрес: г. Якутск, ул. Пример, 1</p>
+        </div>
+    </footer>
+</body>
+</html>
